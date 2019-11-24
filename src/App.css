@@ -20,3 +20,9 @@
 .App-link {
   color: #09d3ac;
 }
+
+body{
+  background-image: url('./Components/Images/background-image3.jpg');
+  background-size: cover;
+  
+}
