@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -7,16 +7,17 @@ import {
   Link
 } from "react-router-dom";
 import Login from './Components/Login/Login'
+import Homepage from './Components/Homepage/Homepage'
+
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path='/'>
-          <Login ></Login>
-        </Route>
-      </Switch>
-    </Router>
+    <Fragment>
+      <Router>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/home" component={Homepage} />        
+      </Router>
+    </Fragment>
   );
 }
 
